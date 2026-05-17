@@ -30,6 +30,7 @@ export const Results: React.FC<ResultsProps> = ({ onStartOver }) => {
         <div className="flex items-center space-x-2 font-bold text-lg text-indigo-700">
           <span>💸</span>
           <span className="hidden sm:inline">Tax Calculator</span>
+          <span className="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-0.5 rounded-md ml-2">Built by Abhay Patil</span>
         </div>
         <div className="space-x-4">
           <button 

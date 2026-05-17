@@ -32,6 +32,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
           <div className="flex items-center gap-2.5">
             <div className="w-9 h-9 rounded-xl flex items-center justify-center text-white text-sm font-bold" style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)' }}>₹</div>
             <span className="text-lg font-bold text-gray-900 tracking-tight">TaxSense</span>
+            <span className="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-0.5 rounded-md ml-2">Built by Abhay Patil</span>
           </div>
           {/* Center links */}
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-500">

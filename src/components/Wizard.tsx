@@ -229,6 +229,7 @@ export const Wizard: React.FC<WizardProps> = ({ onCalculate, onReset }) => {
             >
               <span>💸</span>
               <span>Tax Calculator</span>
+              <span className="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-0.5 rounded-md ml-2">Built by Abhay Patil</span>
             </div>
             <div className="text-sm font-semibold text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
               Step {currentStep} of 10
