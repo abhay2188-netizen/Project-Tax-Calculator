@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+/* ============================================
+   Design System — Premium Fintech Theme
+   ============================================ */
+
+:root {
+  --color-primary: #4F46E5;
+  --color-primary-dark: #4338CA;
+  --color-primary-light: #EEF2FF;
+  --color-accent-green: #10B981;
+  --color-accent-green-light: #ECFDF5;
+  --radius-card: 20px;
+  --radius-button: 14px;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.04), 0 6px 24px rgba(0,0,0,0.04);
+  --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.06), 0 12px 40px rgba(0,0,0,0.06);
+  --shadow-elevated: 0 8px 30px rgba(79,70,229,0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Focus-visible for keyboard accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(79,70,229,0.15); }
+  50% { box-shadow: 0 0 40px rgba(79,70,229,0.25); }
+}
+
+.animate-fade-in { animation: fadeIn 0.25s ease-out both; }
+.animate-fade-in-up { animation: fadeInUp 0.5s ease-out both; }
+.animate-float { animation: float 5s ease-in-out infinite; }
+.animate-float-delayed { animation: float 5s ease-in-out 1.5s infinite; }
+.animate-glow { animation: glow 3s ease-in-out infinite; }
+
+/* Staggered delays for children */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+
+/* ============================================
+   Premium Components
+   ============================================ */
+
+.glass-card {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #4F46E5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-green {
+  background: linear-gradient(135deg, #059669 0%, #10B981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%);
+  box-shadow: 0 4px 14px rgba(79,70,229,0.35);
+  transition: all 0.2s ease;
+}
+.btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(79,70,229,0.45);
+  transform: translateY(-2px);
+}
+
+.card-premium {
+  background: white;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: all 0.3s ease;
+}
+.card-premium:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Number input spinners hidden */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; margin: 0;
+}
+input[type="number"] { -moz-appearance: textfield; }
